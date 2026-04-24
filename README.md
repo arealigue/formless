@@ -101,7 +101,7 @@ Private or password-protected forms are not supported — the form must be publi
 - **v2** — Google Forms, Zod schema output, `--watch` flag, form diffing
 - **Later** — TypeScript interface output, React Hook Form generation, VS Code extension, GitHub Action
 
-See the full [product plan](./formless-plan.md) for details.
+See the full [product plan](./docs/plan.md) for details.
 
 ---
 
