@@ -1,0 +1,191 @@
+:root {
+  --ink-900: #101215;
+  --ink-700: #2f3742;
+  --ink-300: #7f8b9b;
+  --sky-500: #2a8fff;
+  --mint-500: #1bcf9b;
+  --paper-0: #f6f8fb;
+  --paper-1: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-sans), sans-serif;
+  color: var(--ink-900);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(42, 143, 255, 0.18), transparent 45%),
+    radial-gradient(circle at 75% 5%, rgba(27, 207, 155, 0.14), transparent 35%),
+    linear-gradient(180deg, #f8fbff 0%, #eef4fb 40%, #f6f8fb 100%);
+}
+
+a {
+  color: inherit;
+}
+
+.app-shell {
+  width: min(980px, 92vw);
+  margin: 2.5rem auto;
+  background: color-mix(in srgb, var(--paper-1) 88%, rgba(255, 255, 255, 0.6));
+  border: 1px solid rgba(42, 143, 255, 0.15);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 55px rgba(17, 33, 56, 0.12);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(16, 18, 21, 0.08);
+  background: linear-gradient(90deg, rgba(42, 143, 255, 0.08), rgba(27, 207, 155, 0.08));
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.header a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--ink-700);
+}
+
+.main {
+  padding: 1.2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.hero {
+  margin: 0;
+  color: var(--ink-700);
+  line-height: 1.45;
+}
+
+.field-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.field-row input {
+  flex: 1;
+  border: 1px solid rgba(16, 18, 21, 0.2);
+  border-radius: 12px;
+  padding: 0.8rem 0.9rem;
+  font-size: 0.95rem;
+  background: var(--paper-1);
+}
+
+.field-row button,
+.toggle button,
+.output-actions button {
+  border: 0;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.field-row button {
+  color: #fff;
+  background: linear-gradient(135deg, var(--sky-500), #136ad0);
+  min-width: 112px;
+}
+
+.field-row button:disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+
+.toggle {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  background: rgba(16, 18, 21, 0.05);
+  border-radius: 12px;
+  padding: 0.25rem;
+}
+
+.toggle button {
+  background: transparent;
+  color: var(--ink-700);
+  padding: 0.45rem 0.75rem;
+}
+
+.toggle button.active {
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.output {
+  border-radius: 16px;
+  border: 1px solid rgba(16, 18, 21, 0.12);
+  background: #0f1620;
+  color: #dfebfb;
+  overflow: hidden;
+}
+
+.output-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+  font-size: 0.85rem;
+  color: #a4c1e6;
+}
+
+.output-actions button {
+  background: rgba(255, 255, 255, 0.11);
+  color: #ecf4ff;
+  padding: 0.4rem 0.7rem;
+}
+
+.output pre {
+  margin: 0;
+  padding: 0.95rem;
+  max-height: 440px;
+  overflow: auto;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.muted {
+  color: var(--ink-300);
+  font-size: 0.9rem;
+}
+
+.error {
+  color: #ba2f2f;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    width: 94vw;
+    margin: 1rem auto;
+  }
+
+  .field-row {
+    flex-direction: column;
+  }
+
+  .field-row button {
+    width: 100%;
+  }
+}

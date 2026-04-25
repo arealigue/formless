@@ -116,6 +116,10 @@ Contributions are very welcome — especially new platform adapters.
 
 Please open an issue first for anything beyond a small bug fix, so we can discuss the approach before you invest time building it.
 
+## Testing
+
+See the testing guide at [docs/testing.md](./docs/testing.md) for CLI, web, and API test instructions.
+
 ---
 
 ## License

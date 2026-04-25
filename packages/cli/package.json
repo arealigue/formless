@@ -1,0 +1,26 @@
+{
+  "name": "formless",
+  "version": "0.1.0",
+  "description": "CLI for parsing public form URLs into JSON Schema and Markdown",
+  "type": "module",
+  "bin": {
+    "formless": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@formless/core": "0.1.0",
+    "citty": "^0.1.6",
+    "ora": "^8.1.1",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}

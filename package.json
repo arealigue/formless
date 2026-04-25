@@ -1,0 +1,26 @@
+{
+  "name": "formless-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "description": "formless monorepo workspace",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "build": "npm run build --workspace @formless/core && npm run build --workspace formless && npm run build --workspace @formless/web",
+    "typecheck": "npm run build --workspace @formless/core && npm run typecheck --workspace @formless/core && npm run typecheck --workspace formless && npm run typecheck --workspace @formless/web",
+    "lint": "npm run lint --workspace @formless/web",
+    "test": "npm run test --workspace @formless/core",
+    "test:watch": "npm run test:watch --workspace @formless/core",
+    "dev:cli": "npm run dev --workspace formless --",
+    "dev:web": "npm run dev --workspace @formless/web"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.2",
+    "typescript": "^5.8.3"
+  }
+}
